@@ -28,13 +28,21 @@ function App() {
 
               return {
                 question: decode(question.question),
-                answers: answers
+                answers: shuffleArray(answers)
               }
             })
           )
         )
     }
   }, [checkingAnswers])
+
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[array[i], array[j]] = [array[j], array[i]]
+    }
+    return array
+  }
 
   function changeSelected(questionIndex, answerIndex) {
     if (!checkingAnswers) {
