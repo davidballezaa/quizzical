@@ -53,11 +53,15 @@ main {
 
 /* QUESTION ELEMENTS */
 
+.quiz--container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .question--element {
-  margin: 0 auto 20px auto;
+  margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #dbdef0;
-  max-width: 700px;
 }
 
 .question--element h3 {
@@ -65,10 +69,23 @@ main {
 }
 
 .quiz--submit {
-  display: block;
-  margin: 0 auto;
   background-color: #4d5b9e;
   color: #f5f7fb;
+}
+
+.quiz--footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz--footer-checking {
+  justify-content: flex-end;
+  font-weight: 700;
+  font-size: 0.96rem;
+}
+.quiz--footer-checking > * {
+  margin-right: 1rem;
 }
 
 /* ANSWER ELEMENTS */

@@ -108,12 +108,18 @@ function App() {
             <div className="quiz--container">
               <div className="quiz--questions">{questionElements}</div>
 
-              <button className="button quiz--submit" onClick={handleCheck}>
-                {checkingAnswers ? 'Play Again' : 'Check Answers'}
-              </button>
-              {checkingAnswers && (
-                <p>You got {countCorrect()}/5 correct answers</p>
-              )}
+              <div
+                className={`quiz--footer ${
+                  checkingAnswers ? 'quiz--footer-checking' : ''
+                }`}
+              >
+                {checkingAnswers && (
+                  <p>You got {countCorrect()}/5 correct answers</p>
+                )}
+                <button className="button quiz--submit" onClick={handleCheck}>
+                  {checkingAnswers ? 'Play Again' : 'Check Answers'}
+                </button>
+              </div>
             </div>
           ) : (
             <p>Loading...</p>
