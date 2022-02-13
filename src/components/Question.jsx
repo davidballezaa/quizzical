@@ -7,6 +7,7 @@ export default function Question(props) {
       value={answer.answer}
       changeSelected={() => props.changeSelected(answerIndex)}
       isSelected={answer.isSelected}
+      correct={answer.correct}
       checkingAnswers={props.checkingAnswers}
     />
   ))
